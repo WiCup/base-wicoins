@@ -1,89 +1,89 @@
-# **Wicoins Project Test**
+# **Wicoins Project**
 
 ![Wicoins Project](https://res.cloudinary.com/gregoryinnovo/image/upload/v1728860743/foodhy/a3y5xbqiielugirsxy8h.png)
 
-🚀 **Wicoin** es un proyecto de contrato inteligente y aplicación completa (backend + frontend) desarrollado para gestionar la emisión de tokens Wicoin y proporcionar la funcionalidad de **recarga** a través de la red **Base Sepolia**. Este proyecto utiliza **Solidity** para el contrato, **Node.js** para el backend, y un **frontend simple** en HTML/JavaScript para interactuar con el contrato.
+🚀 **Wicoin** is a smart contract project and full application (backend + frontend) developed to manage the issuance of Wicoin tokens and provide **recharge** functionality over the **Sepolia Base** network. This project uses **Solidity** for the contract, **Node.js** for the backend, and a **simple frontend** in HTML/JavaScript to interact with the contract.
 
-## **Índice**
+## **Index**
 
-- [Descripción del Proyecto](#descripción-del-proyecto)
-- [Características](#características)
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Comandos Útiles](#comandos-útiles)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-
----
-
-## **Descripción del Proyecto**
-
-Este proyecto tiene como objetivo proporcionar una solución sencilla para gestionar tokens mediante **Wicoin** y permitir que los usuarios recarguen sus saldos desde el frontend. Toda la lógica está desplegada en la red **Base Sepolia**, una red testnet compatible con Ethereum.
-
-El backend gestiona las transacciones en la blockchain y se comunica con el contrato inteligente, mientras que el frontend permite que los usuarios realicen recargas de forma sencilla.
+- [Project Description](#project-description)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Use](#use)
+- [Project Structure](#project-structure)
+- [Useful Commands](#useful-commands)
+- [Contributions](#contributions)
+- [License](#license)
 
 ---
 
-## **Características**
+## **Project Description**
 
-- Contrato inteligente para emisión de tokens Wicoin en Solidity.
-- Función de recarga disponible en el backend que interactúa con la blockchain.
-- Interfaz sencilla de frontend para realizar recargas.
-- Conexión segura utilizando **dotenv** para manejar las claves privadas y configuraciones sensibles.
-- Compatible con la red **Base Sepolia** para pruebas sin costo.
+This project aims to provide a simple solution to manage tokens using **Wicoin** and allow users to top up their balances from the frontend. All logic is deployed on the **Base Sepolia** network, an Ethereum-compatible testnet network.
+
+The backend manages transactions on the blockchain and communicates with the smart contract, while the frontend allows users to easily recharge.
 
 ---
 
-## **Requisitos**
+## **Features**
 
-- **Node.js** y **npm** instalados. Puedes verificar con:
+- Smart contract for issuing Wicoin tokens in Solidity.
+- Recharge function available in the backend that interacts with the blockchain.
+- Simple frontend interface to recharge.
+- Secure connection using **dotenv** to manage private keys and sensitive settings.
+- Compatible with the **Sepolia Base** network for free testing.
+
+---
+
+## **Requirements**
+
+- **Node.js** and **npm** installed. You can verify with:
   ```bash
   node -v
   npm -v
   ```
-- **MetaMask** configurado con la red Base Sepolia.
-- **ETH de prueba en Sepolia**. Puedes obtenerlo desde un [Sepolia Faucet](https://sepoliafaucet.com).
-- **Hardhat** para compilar y desplegar contratos inteligentes:
+- **MetaMask** configured with the Sepolia Base network.
+- **ETH test in Sepolia**. You can get it from a [Sepolia Faucet](https://sepoliafaucet.com).
+- **Hardhat** to compile and deploy smart contracts:
   ```bash
   npm install --save-dev hardhat
   ```
 
 ---
 
-## **Instalación**
+## **Installation**
 
-1. **Clona el repositorio**:
+1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/tu-usuario/wicoin-project.git
-   cd wicoin-project
+   git clone https://github.com/your-user/base-wicoins.git
+   cd base-wicoins
    ```
 
-2. **Instala las dependencias**:
+2. **Install the dependencies**:
 
    ```bash
    npm install
    ```
 
-3. **Configura las variables de entorno**:
-   Crea un archivo **`.env`** en la raíz del proyecto con el siguiente contenido:
+3. **Set environment variables**:
+   Create a **`.env`** file in the project root with the following content:
 
    ```bash
-   PRIVATE_KEY=tu_llave_privada
+   PRIVATE_KEY=your_private_key
    SEPOLIA_RPC_URL=https://sepolia.base.org
-   CONTRACT_ADDRESS=tu_direccion_del_contrato
+   CONTRACT_ADDRESS=your_contract_address
    ```
 
-4. **Compila el contrato inteligente**:
+4. **Compile the smart contract**:
 
    ```bash
    npx hardhat compile
    ```
 
-5. **Despliega el contrato en la red Sepolia**:
-   Correr el comando script de despliegue o ejecutar el siguiente comando:
+5. **Deploy the contract on the Sepolia network**:
+   Run the deployment script command or run the following command:
 
    ```bash
    npx hardhat run scripts/deploy.js --network sepolia
@@ -91,58 +91,58 @@ El backend gestiona las transacciones en la blockchain y se comunica con el cont
 
 ---
 
-## **Uso**
+## **Usage**
 
-1. **Crea el archivo `.env`**:
+1. **Create the `.env` file**:
 
-   - Asegúrate de crear un archivo `.env` en la carpeta del backend a partir del archivo de ejemplo `.env.example`.
-   - Este archivo debe contener las siguientes credenciales necesarias:
+   - Make sure to create a `.env` file in the backend folder from the example file `.env.example`.
+   - This file should contain the following necessary credentials:
 
-     **Ejemplo del contenido de `.env`:**
+     **Example of `.env` content:**
 
      ```bash
-     PRIVATE_KEY=tu_clave_privada
-     SEPOLIA_RPC_URL=tu_infura_api_key
-     CONTRACT_ADDRESS=tu_direccion_del_contrato
+     PRIVATE_KEY=your_private_key
+     SEPOLIA_RPC_URL=your_infura_api_key
+     CONTRACT_ADDRESS=your_contract_address
      ```
 
-2. **Instala las dependencias necesarias**:
-   Si no lo has hecho ya, instala las dependencias del backend y de los contratos:
+2. **Install necessary dependencies**:
+   If you haven't already, install the backend and contract dependencies:
 
    ```bash
    cd backend-wicoins
    npm install
    ```
 
-3. **Inicia el Backend**:
-   Inicia el servidor backend usando el siguiente comando:
+3. **Start the Backend**:
+   Start the backend server using the following command:
 
    ```bash
    node backend-wicoins/main.js
    ```
 
-4. **Abre el Frontend**:
+4. **Open the Frontend**:
 
-   - Abre el archivo `frontend-wicoins/index.html` en tu navegador web.
-   - Usa la interfaz para ingresar una dirección de Ethereum y el monto que deseas recargar.
-   - Haz clic en el botón correspondiente para enviar la transacción.
+   - Open the `frontend-wicoins/index.html` file in your web browser.
+   - Use the interface to enter an Ethereum address and the amount you want to recharge.
+   - Click the corresponding button to send the transaction.
 
-5. **Prueba el Endpoint con un Cliente REST API (como Postman)**:
+5. **Test the Endpoint with a REST API Client (like Postman)**:
 
-   - Si prefieres, también puedes probar el endpoint manualmente con Postman o cualquier otro cliente REST API.
+   - If you prefer, you can also manually test the endpoint using Postman or any other REST API client.
 
-     **Configuración del Request:**
+     **Request Configuration:**
 
-     - **Método:** `POST`
+     - **Method:** `POST`
      - **URL:** `http://localhost:3000/recharge`
-     - **Body:** (en formato JSON)
+     - **Body:** (in JSON format)
        ```json
        {
          "account": "YOUR_ETHEREUM_ADDRESS",
          "amount": 50000
        }
        ```
-     - **Respuesta esperada:**
+     - **Expected response:**
        ```json
        {
          "status": "Success",
@@ -150,67 +150,67 @@ El backend gestiona las transacciones en la blockchain y se comunica con el cont
        }
        ```
 
-6. **Verifica las Transacciones en la Blockchain**:
-   - Una vez que realices una recarga, puedes verificar la transacción en la red **Sepolia**.
-   - Visita el [explorador de Sepolia Etherscan](https://sepolia.etherscan.io) e ingresa el **hash de la transacción** para confirmar su estado.
+6. **Verify Transactions on the Blockchain**:
+   - Once you complete a recharge, you can verify the transaction on the **Sepolia** network.
+   - Visit the [Sepolia Etherscan explorer](https://sepolia.etherscan.io) and enter the **transaction hash** to confirm its status.
 
 ---
 
-## **Estructura del Proyecto**
+## **Project Structure**
 
 ```plaintext
 wicoin-project/
 │
-├── backend-wicoins/         # Código backend en Node.js
-│   ├── .env                 # Variables de entorno
-│   ├── main.js              # Archivo principal del backend
-│   ├── package.json         # Dependencias del backend
-│   └── package-lock.json    # Bloqueo de versiones
+├── backend-wicoins/         # Backend code in Node.js
+│   ├── .env                 # Environment variables
+│   ├── main.js              # Backend main file
+│   ├── package.json         # Backend dependencies
+│   └── package-lock.json    # Version locking
 │
-├── frontend-wicoins/        # Interfaz frontend del proyecto de ejemplo
-│   └── index.html           # Página HTML principal del frontend
+├── frontend-wicoins/        # Frontend interface for the example project
+│   └── index.html           # Main HTML page for the frontend
 │
-├── wicoins-contracts/       # Contratos inteligentes y scripts de despliegue
-│   ├── artifacts/           # Artefactos generados por Hardhat
-│   ├── cache/               # Cache de Hardhat
-│   ├── contracts/           # Contratos en Solidity
-│   ├── ignition/            # Herramientas de despliegue avanzado
-│   ├── node_modules/        # Dependencias del proyecto
-│   ├── scripts/             # Scripts de despliegue y ejecución
-│   ├── test/                # Pruebas para los contratos
-│   ├── typechain-types/     # Tipos generados por TypeChain
-│   ├── .env                 # Variables de entorno
-│   ├── hardhat.config.ts    # Configuración de Hardhat
-│   ├── package.json         # Dependencias del proyecto
-│   ├── package-lock.json    # Bloqueo de versiones
-│   ├── README.md            # Información del proyecto
-│   └── tsconfig.json        # Configuración de TypeScript
+├── wicoins-contracts/       # Smart contracts and deployment scripts
+│   ├── artifacts/           # Artifacts generated by Hardhat
+│   ├── cache/               # Hardhat cache
+│   ├── contracts/           # Solidity contracts
+│   ├── ignition/            # Advanced deployment tools
+│   ├── node_modules/        # Project dependencies
+│   ├── scripts/             # Deployment and execution scripts
+│   ├── test/                # Contract tests
+│   ├── typechain-types/     # Types generated by TypeChain
+│   ├── .env                 # Environment variables
+│   ├── hardhat.config.ts    # Hardhat configuration
+│   ├── package.json         # Project dependencies
+│   ├── package-lock.json    # Version locking
+│   ├── README.md            # Project information
+│   └── tsconfig.json        # TypeScript configuration
 ```
 
 ---
 
-## **Comandos Útiles**
+## **Useful Commands**
 
-- **Compilar el contrato**:
+- **Compile the contract**:
 
   ```bash
   npx hardhat compile
   ```
 
-- **Desplegar el contrato**:
+- **Deploy the contract**:
 
   ```bash
   npx hardhat run scripts/deploy.js --network sepolia
   ```
 
-- **Iniciar el backend**:
+- **Start the backend**:
 
   ```bash
   node backend-wicoins/main.js
   ```
 
-- **Verificar el balance de la cuenta**:
-  Agrega este fragmento al backend para imprimir el balance:
+- **Check the account balance**:
+  Add this snippet to the backend to print the balance:
   ```javascript
   const balance = await provider.getBalance(wallet.address);
   console.log(`Balance: ${ethers.formatEther(balance)} ETH`);
@@ -218,6 +218,6 @@ wicoin-project/
 
 ---
 
-## **Licencia**
+## **License**
 
-Licencia privada. Todos los derechos reservados.
+Private license. All rights reserved.
