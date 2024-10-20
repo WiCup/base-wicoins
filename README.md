@@ -24,6 +24,8 @@ This project aims to provide a simple solution to manage tokens using **Wicoin**
 
 The backend manages transactions on the blockchain and communicates with the smart contract, while the frontend allows users to easily recharge.
 
+More information in: https://drive.google.com/file/d/1rDspP84W_xVEqP6wnKqo4_ni6J8s6bDl/view?usp=sharing
+
 ---
 
 ## **Features**
